@@ -1,0 +1,50 @@
+# ng.NET ignore file #
+
+##################################
+# User files                     #
+##################################
+*.ReSharper.user
+*/*.csproj.user
+*.user
+*.pdb
+*.suo
+*.sln.docstates
+*.cache
+*.lref
+*.userprefs
+
+##################################
+# compiled source directories    #
+##################################
+[Oo]bj
+[Dd]ebug
+[Dd]ebugPublic
+[Rr]elease
+[Rr]eleases
+[Bb]in
+build/
+
+##################################
+# MS test results                #
+##################################
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+##################################
+# NuGet packages                 #
+##################################
+**/packages/*
+*.nupkg
+!**/packages/repositories.config
+!**/packages/build/
+
+##################################
+# ReSharper files                #
+##################################
+_ReSharper*/
+
+##################################
+# SQL Server files               #
+##################################
+*.mdf
+*.ldf
