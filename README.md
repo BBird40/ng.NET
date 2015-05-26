@@ -15,15 +15,19 @@ Installation
 Download (Not to be confused with NuGet Packages):
 
 * .NET Framework 4.5
+* Chutzpah (JavaScript Test Runner for Test Explorer)
+* PhantomJS (Headless Browser for ReSharper JavaScript Unit Testing)
 
 Dependencies
 ----
+Libraries and Frameworks downloaded via NuGet: 
 
 * AngularJS 1.3.15
 * Angular.UI.Bootstrap 0.13.0
 * Bootstrap 3.3.4
 * jQuery 1.9.1
 * EntityFramework 6.1.3
+* Jasmine 1.3.1.1
 
 To-do
 ------
@@ -40,4 +44,5 @@ Links associated with the project associated to solve problems.
 * [VisualStudio .gitignore file](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore)
 * [ASP.NET MVC with AngularJS & Bootstrap](http://www.pluralsight.com/courses/angularjs-forms-bootstrap-mvc5)
 * [Minification and Dependency Injection with Angular](https://docs.angularjs.org/tutorial/step_05)
-*[Using HTML5 mode routing for Angular Routing](https://docs.angularjs.org/error/$location/nobase)
+* [Using HTML5 mode routing for Angular Routing](https://docs.angularjs.org/error/$location/nobase)
+* [Running JavaScript unit tests with ReSharper using JasmineJS & PhantomJS](https://blogs.endjin.com/2014/09/unit-testing-angularjs-with-visual-studio-resharper-and-teamcity/)
