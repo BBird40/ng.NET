@@ -106,7 +106,9 @@
     <Content Include="Scripts\jasmine.js" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ng.NET\ng.NET.csproj">
