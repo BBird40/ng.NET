@@ -39,6 +39,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ng.NET.Client", "http://loc
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng.NET.WebAPI", "ng.NET.WebAPI\ng.NET.WebAPI.csproj", "{AB7CAAD1-7367-4A65-A0F7-2D8FB4461FC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{D46CDFFE-254F-463D-B65F-1876748D9AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D46CDFFE-254F-463D-B65F-1876748D9AE1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{D46CDFFE-254F-463D-B65F-1876748D9AE1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{AB7CAAD1-7367-4A65-A0F7-2D8FB4461FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7CAAD1-7367-4A65-A0F7-2D8FB4461FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7CAAD1-7367-4A65-A0F7-2D8FB4461FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7CAAD1-7367-4A65-A0F7-2D8FB4461FC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
