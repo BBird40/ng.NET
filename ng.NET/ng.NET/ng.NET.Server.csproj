@@ -137,17 +137,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\TemplateApp.js" />
-    <Content Include="app\DemoForm\dfController.js" />
-    <Content Include="app\DemoForm\dfDirective.js" />
-    <Content Include="app\DemoForm\dfTemplate.html" />
-    <Content Include="app\DataService.js" />
-    <Content Include="app\Directives\ValidationDirective.js" />
-    <Content Include="app\Home.html" />
-    <Content Include="Content\app.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
