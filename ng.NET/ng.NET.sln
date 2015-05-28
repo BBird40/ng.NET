@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng.NET", "ng.NET\ng.NET.csproj", "{99E7D929-3E06-402A-BD92-793B4424CE4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng.NET.Server", "ng.NET\ng.NET.Server.csproj", "{99E7D929-3E06-402A-BD92-793B4424CE4E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng.NET.Tests", "ng.NET.Tests\ng.NET.Tests.csproj", "{FD40873B-3B99-4E5C-AF6B-929AAE2B7D96}"
 EndProject
@@ -16,6 +16,28 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{6093C36F-EB6B-470A-A05B-A7D4B00EC116}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{595000E2-EE95-48CD-8BFE-8F376E17F71E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ng.NET.Client", "http://localhost:4935", "{D46CDFFE-254F-463D-B65F-1876748D9AE1}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_4935"
+		Debug.AspNetCompiler.PhysicalPath = "ng.NET.Client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4935\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_4935"
+		Release.AspNetCompiler.PhysicalPath = "ng.NET.Client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4935\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ng.NET.Client\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +77,10 @@ Global
 		{595000E2-EE95-48CD-8BFE-8F376E17F71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{595000E2-EE95-48CD-8BFE-8F376E17F71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{595000E2-EE95-48CD-8BFE-8F376E17F71E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46CDFFE-254F-463D-B65F-1876748D9AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46CDFFE-254F-463D-B65F-1876748D9AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46CDFFE-254F-463D-B65F-1876748D9AE1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46CDFFE-254F-463D-B65F-1876748D9AE1}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
