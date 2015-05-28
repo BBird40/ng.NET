@@ -1,4 +1,4 @@
-﻿var templateApp = angular.module('templateApp', ["ngRoute", 'ui.bootstrap']);
+﻿var templateApp = angular.module("templateApp", ["ngRoute", "ui.bootstrap"]);
 
 templateApp.config(
     // this allows the parameters to be minified but 
