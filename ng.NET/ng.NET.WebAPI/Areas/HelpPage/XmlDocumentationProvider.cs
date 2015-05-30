@@ -13,8 +13,11 @@ namespace ng.NET.WebAPI.Areas.HelpPage
     /// </summary>
     public class XmlDocumentationProvider : IDocumentationProvider
     {
-        private XPathNavigator _documentNavigator;
+        private readonly XPathNavigator _documentNavigator;
+        private const string TypeExpression = "/doc/members/member[@name='T:{0}']";
         private const string MethodExpression = "/doc/members/member[@name='M:{0}']";
+        private const string PropertyExpression = "/doc/members/member[@name='P:{0}']";
+        private const string FieldExpression = "/doc/members/member[@name='F:{0}']";
         private const string ParameterExpression = "param[@name='{0}']";
 
         /// <summary>
@@ -31,6 +34,12 @@ namespace ng.NET.WebAPI.Areas.HelpPage
             _documentNavigator = xpath.CreateNavigator();
         }
 
+        public string GetDocumentation(HttpControllerDescriptor controllerDescriptor)
+        {
+            XPathNavigator typeNode = GetTypeNode(controllerDescriptor.ControllerType);
+            return GetTagValue(typeNode, "summary");
+        }
+
         public virtual string GetDocumentation(HttpActionDescriptor actionDescriptor)
         {
             XPathNavigator methodNode = GetMethodNode(actionDescriptor);
@@ -42,7 +51,6 @@ namespace ng.NET.WebAPI.Areas.HelpPage
                     return summaryNode.Value.Trim();
                 }
             }
-
             return null;
         }
 
@@ -62,8 +70,13 @@ namespace ng.NET.WebAPI.Areas.HelpPage
                     }
                 }
             }
-
             return null;
+        }
+
+        public string GetResponseDocumentation(HttpActionDescriptor actionDescriptor)
+        {
+            XPathNavigator methodNode = GetMethodNode(actionDescriptor);
+            return GetTagValue(methodNode, "returns");
         }
 
         private XPathNavigator GetMethodNode(HttpActionDescriptor actionDescriptor)
@@ -74,7 +87,6 @@ namespace ng.NET.WebAPI.Areas.HelpPage
                 string selectExpression = String.Format(CultureInfo.InvariantCulture, MethodExpression, GetMemberName(reflectedActionDescriptor.MethodInfo));
                 return _documentNavigator.SelectSingleNode(selectExpression);
             }
-
             return null;
         }
 
@@ -87,7 +99,6 @@ namespace ng.NET.WebAPI.Areas.HelpPage
                 string[] parameterTypeNames = parameters.Select(param => GetTypeName(param.ParameterType)).ToArray();
                 name += String.Format(CultureInfo.InvariantCulture, "({0})", String.Join(",", parameterTypeNames));
             }
-
             return name;
         }
 
@@ -105,8 +116,27 @@ namespace ng.NET.WebAPI.Areas.HelpPage
                 string[] argumentTypeNames = genericArguments.Select(t => GetTypeName(t)).ToArray();
                 return String.Format(CultureInfo.InvariantCulture, "{0}{{{1}}}", typeName, String.Join(",", argumentTypeNames));
             }
-
             return type.FullName;
+        }
+
+        private static string GetTagValue(XPathNavigator parentNode, string tagName)
+        {
+            if (parentNode != null)
+            {
+                XPathNavigator node = parentNode.SelectSingleNode(tagName);
+                if (node != null)
+                {
+                    return node.Value.Trim();
+                }
+            }
+            return null;
+        }
+
+        private XPathNavigator GetTypeNode(Type type)
+        {
+            string controllerTypeName = GetTypeName(type);
+            string selectExpression = String.Format(CultureInfo.InvariantCulture, TypeExpression, controllerTypeName);
+            return _documentNavigator.SelectSingleNode(selectExpression);
         }
     }
 }
