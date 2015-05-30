@@ -1,6 +1,6 @@
 ng.NET
 =========
-ng.NET is a ASP.NET MVC template project using AngularJS, AngularUI, Bootstrap, Entity Framework, and jQuery. The demo code is inspired by the Mark Zamoyta tutorial on AngularJS Forms using Boostrap and MVC5.
+ng.NET is a ASP.NET MVC template project using AngularJS, AngularUI, Bootstrap, Entity Framework, and jQuery. The demo code is inspired by the Mark Zamoyta tutorial on AngularJS Forms using Boostrap and MVC5 and the Deborah Kurata tutorial on Angular Front to Back with Web API.
 
 The design utilized is the N-Tier Layered Application. The layers consist of a Data Access layer, Business layer, and Service layer. Other projects have been created to decouple other pieces of functionality to promote reuse such as the Database Entities (generated from Entity Framework), Utilities, and the Domain Model (to be used by the view).
 
@@ -60,3 +60,5 @@ Links associated with the project associated to solve problems.
 * [Business Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658103.aspx)
 * [Service Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658090.aspx)
 * [Data Access Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658127.aspx)
+* [Enable CORS](https://github.com/bigfont/webapi-cors)
+* [Angular with WebApi](http://www.pluralsight.com/courses/angular-web-api-front-back)
