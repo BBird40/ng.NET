@@ -1,14 +1,17 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Cors;
+using Newtonsoft.Json.Serialization;
 
 namespace ng.NET.WebAPI
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
-        {
-            config.MapHttpAttributeRoutes();
+        {            
             EnableCrossSiteRequests(config);
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
