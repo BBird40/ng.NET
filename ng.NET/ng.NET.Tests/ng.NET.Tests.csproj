@@ -110,12 +110,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ng.NET\ng.NET.Server.csproj">
-      <Project>{99E7D929-3E06-402A-BD92-793B4424CE4E}</Project>
-      <Name>ng.NET.Server</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng.NET.Server", "ng.NET\ng.NET.Server.csproj", "{99E7D929-3E06-402A-BD92-793B4424CE4E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng.NET.Tests", "ng.NET.Tests\ng.NET.Tests.csproj", "{FD40873B-3B99-4E5C-AF6B-929AAE2B7D96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseEntities", "DatabaseEntities\DatabaseEntities.csproj", "{D69CAC7A-1DD5-4551-878A-9C7EC505C142}"
@@ -47,10 +45,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{99E7D929-3E06-402A-BD92-793B4424CE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99E7D929-3E06-402A-BD92-793B4424CE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99E7D929-3E06-402A-BD92-793B4424CE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99E7D929-3E06-402A-BD92-793B4424CE4E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD40873B-3B99-4E5C-AF6B-929AAE2B7D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD40873B-3B99-4E5C-AF6B-929AAE2B7D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD40873B-3B99-4E5C-AF6B-929AAE2B7D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
