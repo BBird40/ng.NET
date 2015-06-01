@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+
+<html ng-app="templateApp">
+<head>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/spa/styles")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/spa/scripts")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+    <body class="container"> 
+        <br />       
+        <div ng-view></div>
+    </body>
+</html>
+
