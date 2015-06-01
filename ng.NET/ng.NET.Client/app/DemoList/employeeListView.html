@@ -1,1 +1,27 @@
-﻿
+﻿<div class="panel panel-primary" ng-controller="employeeListController as vm">
+    <div class="panel-heading" style="font-size:large">
+        Product List
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th><a ng-click="vm.changeSort('Fullname')">Fullname</a><span ng-show="vm.sortProperty == 'Fullname'"><i ng-show="vm.sortAscending" class="fa fa-arrow-up"></i><i ng-show="!vm.sortAscending" class="fa fa-arrow-down"></i></span></th>
+                    <th><a ng-click="vm.changeSort('FavoriteHobby')">Favorite Hobby</a></th>
+                    <th>Happiness</th>
+                    <th><a ng-click="vm.changeSort('Department')">Department</a><span ng-show="vm.sortProperty == 'Department'"><i ng-show="vm.sortAscending" class="fa fa-arrow-up"></i><i ng-show="!vm.sortAscending" class="fa fa-arrow-down"></i></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in vm.employees">
+                    <td>{{ employee.fullname}}</td>
+                    <td>{{ employee.favoriteHobby}}</td>
+                    <td>{{ employee.happiness}}</td>
+                    <td>{{ employee.department}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

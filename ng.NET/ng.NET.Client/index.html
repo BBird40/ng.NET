@@ -1,9 +1,44 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head lang="en">
+    <meta charset="UTF-8"/>
     <title></title>
+        
+    <!-- style sheets -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
 </head>
-<body>
 
+<body ng-app="templateApp">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">ng.NET Web API</div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container">
+        <div ng-include="'app/DemoList/employeeListView.html'"></div>
+    </div>    
+
+    <!-- Library Scripts -->
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+<script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    
+
+    <!-- Application Scripts -->
+    <script src="app/TemplateApp.js"></script>
+    <script src="app/DemoList/employeeListController.js"></script>
+
+    <!-- Services Scripts -->
+    <script src="common/common.services.js"></script>
+    <script src="common/employeeResource.js"></script>
 </body>
 </html>

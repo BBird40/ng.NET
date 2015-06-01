@@ -12,11 +12,11 @@ using DomainModel;
 
 namespace ng.NET.WebAPI.Controllers
 {    
-    public class EmployeeController : ApiController
+    public class EmployeesController : ApiController
     {
-        // GET api/products
-        [EnableQuery()]
-        [ResponseType(typeof(Employee))]
+        // GET api/employees
+        //[EnableQuery()]
+        //[ResponseType(typeof(Employee))]
         public IHttpActionResult Get()
         {
             var productRepository = new EmployeeRepository();
@@ -29,9 +29,9 @@ namespace ng.NET.WebAPI.Controllers
             return productRepository.Retrieve().Where(x => x.Department.Contains(search));
         }
 
-        // GET api/products/5
-        [ResponseType(typeof(Employee))]
-        [Authorize]
+        // GET api/employees/5
+        //[ResponseType(typeof(Employee))]
+        //[Authorize]
         public IHttpActionResult Get(int id)
         {
             try
@@ -50,7 +50,7 @@ namespace ng.NET.WebAPI.Controllers
 
         }
 
-        // POST api/products
+        // POST api/employees
         [ResponseType(typeof(Employee))]
         public IHttpActionResult Post([FromBody]Employee product)
         {
@@ -75,7 +75,7 @@ namespace ng.NET.WebAPI.Controllers
             }
         }
 
-        // PUT api/products/5
+        // PUT api/employees/5
         [ResponseType(typeof(Employee))]
         public IHttpActionResult Put(int id, [FromBody]Employee product)
         {
@@ -101,7 +101,7 @@ namespace ng.NET.WebAPI.Controllers
             }
         }
 
-        // DELETE api/products/5
+        // DELETE api/employees/5
         public void Delete(int id)
         {
         }

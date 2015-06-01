@@ -3,20 +3,9 @@
 
     angular.module('templateApp').factory('employeeResource', employeeResource);
 
-    employeeResource.$inject = ['$resource', 'appSettings', 'currentUser'];
+    employeeResource.$inject = ['$resource', 'appSettings'];
 
-    function employeeResource($resource, appSettings, currentUser) {
-        return $resource(appSettings.serverPath + "api/products/:id", null, {
-            'get': {
-                headers: { 'Authorization': 'Bearer ' + currentUser.getProfile().token }
-            },
-            'save': {
-                headers: { 'Authorization': 'Bearer ' + currentUser.getProfile().token }
-            },
-            'update': {
-                method: 'PUT',
-                headers: { 'Authorization': 'Bearer ' + currentUser.getProfile().token }
-            }
-        });
+    function employeeResource($resource, appSettings) {
+        return $resource(appSettings.serverPath + "api/employees/:id");
     }
 })();

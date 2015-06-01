@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
-using System.Web.Hosting;
 using DomainModel;
 using Newtonsoft.Json;
 
@@ -12,7 +12,7 @@ namespace DataAccessLayer
     /// </summary>
     public class EmployeeRepository
     {
-        private readonly string _filepath = HostingEnvironment.MapPath(@"~/employee.json");
+        private readonly string _filepath = ConfigurationManager.AppSettings["EmployeesJsonFile"];
 
         /// <summary>
         /// Creates a new employee with default values

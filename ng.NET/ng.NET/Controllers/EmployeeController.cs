@@ -12,8 +12,8 @@ namespace ng.NET.Controllers
         {
             return new List<Employee>()
             {
-                new Employee { FullName = "Alexandra Byrd" },
-                new Employee { FullName = "Bryan Cox" }
+                new Employee { Fullname = "Alexandra Byrd" },
+                new Employee { Fullname = "Bryan Cox" }
             };
         }
 
