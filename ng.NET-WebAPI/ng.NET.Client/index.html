@@ -21,13 +21,16 @@
     
 
     <div class="container">
+        <div ng-view></div>
+        <br/>
+        <br/>
         <div ng-include="'app/DemoList/employeeListView.html'"></div>
     </div>    
 
     <!-- Library Scripts -->
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-resource.js"></script>
-<script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-route.js"></script>
     <script src="Scripts/jquery-1.9.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
@@ -35,10 +38,15 @@
 
     <!-- Application Scripts -->
     <script src="app/TemplateApp.js"></script>
+    <script src="app/homeController.js"></script>
     <script src="app/DemoList/employeeListController.js"></script>
+    <script src="app/DemoForm/dfController.js"></script>
+    <script src="app/DemoForm/dfDirective.js"></script>
+    <script src="app/Directives/ValidationDirective.js"></script>
 
     <!-- Services Scripts -->
     <script src="common/common.services.js"></script>
     <script src="common/employeeResource.js"></script>
+    <script src="app/DataService.js"></script>
 </body>
 </html>

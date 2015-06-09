@@ -6,8 +6,9 @@
 
     function employeeListController(employeeResource) {
         var vm = this;
+        vm.searchCriteria = "WebDev";
 
-        employeeResource.query(function(data) {
+        employeeResource.query({ $top: 3 }, function(data) {
             vm.employees = data;
         });
     }

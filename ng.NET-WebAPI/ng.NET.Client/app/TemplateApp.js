@@ -8,7 +8,7 @@ templateApp.config(
     $routeProvider
         .when("/home", {
             templateUrl: "app/Home.html",
-            controller: "HomeController"
+            controller: "homeController"
         })
         .when("/newForm", {
             templateUrl: "app/DemoForm/dfTemplate.html",
@@ -27,34 +27,3 @@ templateApp.config(
         requireBase: false
     });
 }]);
-
-templateApp.controller("HomeController",
-    ["$scope", "$location", "DataService",
-    function($scope, $location, DataService) {
-        
-        DataService.getEmployees().then(
-            function (results) {
-                // on success
-                var data = results.data;
-            },
-            function (results) {
-                // on error
-                var data = results.data;
-            }
-        );
-
-        $scope.showCreateForm = function () {
-            // used to show in a modal
-            //$modal.open({
-            //    templateUrl: "app/DemoForm/dfTemplate.html",
-            //    controller: "dfController"
-            //})
-
-            // Used to open the form in a new page
-            $location.path("/newForm");            
-        };
-        
-        $scope.showUpdateForm = function (id) {
-            $location.path("/updateForm/" + id);
-        };
-    }]);

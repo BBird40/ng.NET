@@ -15,18 +15,16 @@ namespace ng.NET.WebAPI.Controllers
     public class EmployeesController : ApiController
     {
         // GET api/employees
-        //[EnableQuery()]
+        [EnableQuery]
         //[ResponseType(typeof(Employee))]
-        public IHttpActionResult Get()
-        {
-            var productRepository = new EmployeeRepository();
-            return Ok(productRepository.Retrieve().AsQueryable());
+        public IQueryable<Employee> Get()
+        {         
+            return new EmployeeRepository().Retrieve().AsQueryable();
         }
 
         public IEnumerable<Employee> Get(string search)
-        {
-            var productRepository = new EmployeeRepository();
-            return productRepository.Retrieve().Where(x => x.Department.Contains(search));
+        {            
+            return new EmployeeRepository().Retrieve().Where(x => x.Department.Contains(search));
         }
 
         // GET api/employees/5
@@ -62,8 +60,7 @@ namespace ng.NET.WebAPI.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var productRepository = new EmployeeRepository();
-                var newEmployee = productRepository.Save(product);
+                var newEmployee = new EmployeeRepository().Save(product);
                 if (newEmployee == null)
                     return Conflict();
 
@@ -87,9 +84,7 @@ namespace ng.NET.WebAPI.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var productRepository = new EmployeeRepository();
-                var updatedEmployee = productRepository.Save(id, product);
-                
+                var updatedEmployee = new EmployeeRepository().Save(id, product);                
                 if (updatedEmployee == null)                
                     return NotFound();
                 
