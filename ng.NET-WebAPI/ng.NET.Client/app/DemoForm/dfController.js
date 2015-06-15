@@ -1,13 +1,17 @@
 ﻿// sets up the $scope variable.
 
 templateApp.controller('dfController',
-    ["$scope", "$window", "$routeParams", "DataService",
-    function dfController($scope, $window, $routeParams, DataService) {
+    ["$scope", "$window", "$routeParams", "DataService", 'employeeResource',
+    function dfController($scope, $window, $routeParams, DataService, employeeResource) {
 
         if ($routeParams.id)
-            $scope.employee = DataService.getEmployee($routeParams.id);
+            employeeResource.query({ id: $routeParams.id }, function(data) {
+                $scope.employee = data;
+            });
         else
-            $scope.employee = { id: 0 };
+            employeeResource.query({ id: 0 }, function (data) {
+                $scope.employee = data;
+            });
                 
         // create a copy to be used to revert user input
         $scope.editableEmployee = angular.copy($scope.employee);
@@ -30,14 +34,13 @@ templateApp.controller('dfController',
             if ($scope.employeeForm.$invalid)
                 return;
 
-            if ($scope.editableEmployee.id == 0) {
+            if ($scope.editableEmployee.id === 0) {
                 //insert new
-                DataService.insertEmployee($scope.editableEmployee).then(
+                $scope.editableEmployee.$save(
                     function (results) {
                         // on success
                         $scope.employee = angular.copy($scope.editableEmployee);
-                        // this is best used when the template is loaded on a page; 
-                        // not in a modal
+                        // this is best used when the template is loaded on a page; not in a modal
                         $window.history.back();
                     },
                     function (results) {
@@ -47,7 +50,16 @@ templateApp.controller('dfController',
                     });
             } else {
                 // update
-                DataService.updateEmployee($scope.editableEmployee);
+                $scope.editableEmployee.$update({ id: $scope.editableEmployee.productId },
+                    function (data) {
+                    $scope.employee = angular.copy($scope.editableEmployee);
+                    $window.history.back();
+                    },
+                    function(data) {
+                        // on error
+                        $scope.hasFormError = true;
+                        $scope.serverSideErrors = results.statusText;
+                    });
             }            
         };
 

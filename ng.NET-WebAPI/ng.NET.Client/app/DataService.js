@@ -9,7 +9,7 @@ templateApp.factory('DataService',
         };
 
         var getEmployee = function (id) {
-            if (id == 111) {
+            if (id === 111) {
                 return {                    
                     id: 111,
                     fullname: "Jimmy Ellington",

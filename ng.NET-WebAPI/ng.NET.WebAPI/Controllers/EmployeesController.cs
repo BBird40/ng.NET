@@ -30,20 +30,18 @@ namespace ng.NET.WebAPI.Controllers
         // GET api/employees/5
         //[ResponseType(typeof(Employee))]
         //[Authorize]
-        public IHttpActionResult Get(int id)
+        public Employee Get(int id)
         {
             try
             {
-                //throw new ArgumentNullException("This is a test");
                 var productRepository = new EmployeeRepository();
-                var product = id > 0 ? 
+                return id > 0 ? 
                     productRepository.Retrieve().FirstOrDefault(x => x.Id == id) : 
                     productRepository.Create();
-                return Ok(product);
             }
             catch (Exception ex)
             {
-                return InternalServerError(ex);
+                return null;
             }
 
         }
