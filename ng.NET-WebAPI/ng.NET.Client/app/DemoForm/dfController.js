@@ -4,17 +4,26 @@ templateApp.controller('dfController',
     ["$scope", "$window", "$routeParams", "DataService", 'employeeResource',
     function dfController($scope, $window, $routeParams, DataService, employeeResource) {
 
+        function errorCallback(response) {
+            $scope.serverSideErrors = response.statusText + "\r\n";
+            if (response.data.modelState) {
+                for (var key in response.data.modelState) {
+                    $scope.serverSideErrors += response.data.modelState[key] + "\r\n";
+                }
+            }
+            if (response.data.exceptionMessage)
+                $scope.serverSideErrors += response.data.exceptionMessage;
+        };
+
+        var employeeId = 0;
         if ($routeParams.id)
-            employeeResource.query({ id: $routeParams.id }, function(data) {
-                $scope.employee = data;
-            });
-        else
-            employeeResource.query({ id: 0 }, function (data) {
-                $scope.employee = data;
-            });
-                
-        // create a copy to be used to revert user input
-        $scope.editableEmployee = angular.copy($scope.employee);
+            employeeId = $routeParams.id;
+
+        employeeResource.get({ id: employeeId }, function (data) {
+            $scope.employee = data;
+            // create a copy to be used to revert user input
+            $scope.editableEmployee = angular.copy($scope.employee);
+        }, errorCallback);                        
 
         $scope.hobbies = DataService.getHobbies;
 
@@ -26,8 +35,8 @@ templateApp.controller('dfController',
         $scope.hoveringOver = function(value) {
             $scope.overStar = value;
             $scope.percent = 100 * (value / 10);
-        };       
-
+        };
+        
         $scope.submitForm = function () {
             $scope.$broadcast('show-errors-event');
 
@@ -42,24 +51,14 @@ templateApp.controller('dfController',
                         $scope.employee = angular.copy($scope.editableEmployee);
                         // this is best used when the template is loaded on a page; not in a modal
                         $window.history.back();
-                    },
-                    function (results) {
-                        // on error
-                        $scope.hasFormError = true;
-                        $scope.serverSideErrors = results.statusText;
-                    });
+                    },errorCallback);
             } else {
                 // update
-                $scope.editableEmployee.$update({ id: $scope.editableEmployee.productId },
+                $scope.editableEmployee.$update({ id: $scope.editableEmployee.id },
                     function (data) {
                     $scope.employee = angular.copy($scope.editableEmployee);
                     $window.history.back();
-                    },
-                    function(data) {
-                        // on error
-                        $scope.hasFormError = true;
-                        $scope.serverSideErrors = results.statusText;
-                    });
+                    },errorCallback);
             }            
         };
 

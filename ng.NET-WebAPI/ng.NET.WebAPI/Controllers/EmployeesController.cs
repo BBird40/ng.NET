@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using System.Web.OData;
 using DataAccessLayer;
@@ -17,9 +14,9 @@ namespace ng.NET.WebAPI.Controllers
         // GET api/employees
         [EnableQuery]
         //[ResponseType(typeof(Employee))]
-        public IQueryable<Employee> Get()
+        public IHttpActionResult Get()
         {         
-            return new EmployeeRepository().Retrieve().AsQueryable();
+            return Ok(new EmployeeRepository().Retrieve().AsQueryable());
         }
 
         public IEnumerable<Employee> Get(string search)
@@ -30,20 +27,23 @@ namespace ng.NET.WebAPI.Controllers
         // GET api/employees/5
         //[ResponseType(typeof(Employee))]
         //[Authorize]
-        public Employee Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            try
+            Employee employee;
+            var employeeRepository = new EmployeeRepository();
+
+            if (id > 0)
             {
-                var productRepository = new EmployeeRepository();
-                return id > 0 ? 
-                    productRepository.Retrieve().FirstOrDefault(x => x.Id == id) : 
-                    productRepository.Create();
+                employee = employeeRepository.Retrieve().FirstOrDefault(e => e.Id == id);
+                if(employee == null)
+                    return NotFound();
             }
-            catch (Exception ex)
+            else
             {
-                return null;
+                employee = employeeRepository.Create();
             }
 
+            return Ok(employee);
         }
 
         // POST api/employees
