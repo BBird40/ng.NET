@@ -13,7 +13,7 @@ namespace ng.NET.WebAPI.Controllers
     {
         // GET api/employees
         [EnableQuery]
-        //[ResponseType(typeof(Employee))]
+        [ResponseType(typeof(Employee))]
         public IHttpActionResult Get()
         {         
             return Ok(new EmployeeRepository().Retrieve().AsQueryable());
@@ -25,7 +25,7 @@ namespace ng.NET.WebAPI.Controllers
         }
 
         // GET api/employees/5
-        //[ResponseType(typeof(Employee))]
+        [ResponseType(typeof(Employee))]
         //[Authorize]
         public IHttpActionResult Get(int id)
         {

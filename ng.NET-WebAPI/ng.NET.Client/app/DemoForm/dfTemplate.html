@@ -93,8 +93,8 @@
 
 <div>
     <div class="col-sm-offset-3 col-sm-9">
+        <input type="submit" class="btn btn-primary" value="Submit" ng-disabled="employeeForm.$invalid" ng-click="submitForm()" />
         <input type="button" class="btn btn-default" value="Cancel" ng-click="cancelForm()"/>
-        <input type="submit" class="btn btn-primary" value="Submit" ng-click="submitForm()" />
-        <input type="reset" class="btn btn-warning" value="Reset" ng-click="resetForm()" />
+        <input type="reset" class="btn btn-warning" value="Reset" ng-click="resetForm()"/>
     </div>
 </div>
