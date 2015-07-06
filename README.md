@@ -29,11 +29,27 @@ Dependencies
 Libraries and Frameworks downloaded via NuGet: 
 
 * AngularJS 1.3.15
+* AngularJS.Core 1.3.15
+* AngularJS.Resource 1.3.15
+* AngularJS.Route 1.3.15
 * Angular.UI.Bootstrap 0.13.0
 * Bootstrap 3.3.4
-* jQuery 1.9.1
 * EntityFramework 6.1.3
 * Jasmine 1.3.1.1
+* jQuery 2.1.4
+* Microsoft.AspNet.Cors 5.2.3
+* Microsoft.AspNet.OData 5.6.0
+* Microsoft.AspNet.Identity.Core 2.2.1
+* Microsoft.AspNet.Identity.EntityFramework 2.2.1
+* Microsoft.AspNet.WebApi 5.2.3
+* Microsoft.AspNet.WebApi.Owin 5.2.3
+* Microsoft.Owin 3.0.1
+* Microsfot.Owin.Host.SystemWeb 3.0.1
+* Microsoft.Owin.SystemWeb 3.0.1
+* Microsoft.Owin.Security 2.1.0
+* Microsoft.Owin.Security.Cookies 2.1.0
+* Microsoft.Owin.Security.OAuth 2.1.0
+* Owin 1.0
 
 To-do
 ------
@@ -62,3 +78,5 @@ Links associated with the project associated to solve problems.
 * [Data Access Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658127.aspx)
 * [Enable CORS](https://github.com/bigfont/webapi-cors)
 * [Angular with WebApi](http://www.pluralsight.com/courses/angular-web-api-front-back)
+* [ASP.NET Authentication using EF and Owin](http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/)
+* [Token based authentication with ASP.NET Web Api](http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/)
