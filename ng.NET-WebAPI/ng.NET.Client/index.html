@@ -15,12 +15,13 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="navbar-brand">ng.NET Web API</div>
+                <login />
             </div>
         </div>
     </nav>
     
 
-    <div class="container">
+    <div class="container" ng-if="$scope.isLoggedIn">
         <div ng-view></div>
         <br/>
         <br/>
@@ -43,10 +44,13 @@
     <script src="app/DemoForm/dfController.js"></script>
     <script src="app/DemoForm/dfDirective.js"></script>
     <script src="app/Directives/ValidationDirective.js"></script>
+    <script src="app/Login/loginDirective.js"></script>
+    <script src="app/Login/loginController.js"></script>
 
     <!-- Services Scripts -->
     <script src="common/common.services.js"></script>
     <script src="common/employeeResource.js"></script>
     <script src="app/DataService.js"></script>
+    <script src="common/userAccount.js"></script>
 </body>
 </html>
