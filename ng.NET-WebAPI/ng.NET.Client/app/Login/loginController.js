@@ -1,44 +1,44 @@
 ﻿(function () {
     "use strict";
     angular.module("templateApp").controller("loginController", loginController);
-    loginController.$inject = ['$scope'];
+    loginController.$inject = ['$scope', 'userAccount'];
 
-    function loginController($scope) {
-        isLoggedIn = false;
-        message = '';
-        userData = {
+    function loginController($scope, userAccount) {
+        $scope.isLoggedIn = false;
+        $scope.message = '';
+        $scope.userData = {
             userName: '',
             email: '',
             password: '',
             confirmPassword: ''
         };
 
-        registerUser = function () {
-            userData.confirmPassword = userData.password;
+        $scope.registerUser = function () {
+            $scope.userData.confirmPassword = $scope.userData.password;
 
-            userAccount.registerUser(userData,
+            userAccount.registerUser($scope.userData,
                 function (data) {
-                    confirmPassword = "";
-                    message = "...Registration Successful";
-                    login();
+                    $scope.confirmPassword = "";
+                    $scope.message = "...Registration Successful";
+                    $scope.login();
                 }, errorCallback);
         }
 
-        login = function () {
+        $scope.login = function () {
 
         }
 
         function errorCallback(response) {
-            vm.message = response.statusText + "\r\n";
+            $scope.message = response.statusText + "\r\n";
             if (response.data.modelState) {
                 for (var key in response.data.modelState) {
-                    vm.message += response.data.modelState[key] + "\r\n";
+                    $scope.message += response.data.modelState[key] + "\r\n";
                 }
             }
             if (response.data.exceptionMessage)
-                vm.message += response.data.exceptionMessage;
+                $scope.message += response.data.exceptionMessage;
             if (response.data.error)
-                vm.message += response.data.error;
+                $scope.message += response.data.error;
         };
     };
 
