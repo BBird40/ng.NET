@@ -16,7 +16,7 @@
         $scope.registerUser = function () {
             $scope.userData.confirmPassword = $scope.userData.password;
 
-            userAccount.registerUser($scope.userData,
+            userAccount.registration.registerUser($scope.userData,
                 function (data) {
                     $scope.confirmPassword = "";
                     $scope.message = "...Registration Successful";
@@ -25,7 +25,16 @@
         }
 
         $scope.login = function () {
+            $scope.userData.grant_type = "password";
+            $scope.userData.userName = $scope.userData.email;
 
+            userAccount.login.loginUser($scope.userData,
+                function (data) {
+                    $scope.isLoggedIn = true;
+                    $scope.message = "";
+                    $scope.password = "";
+                    $scope.token = data.access_token;
+                }, errorCallback);
         }
 
         function errorCallback(response) {
