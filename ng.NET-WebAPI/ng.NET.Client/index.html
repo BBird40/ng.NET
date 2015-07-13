@@ -21,7 +21,7 @@
     </nav>
     
 
-    <div class="container" ng-if="$scope.isLoggedIn()">
+    <div class="container" ng-controller="indexController" ng-if="isLoggedIn()">
         <div ng-view></div>
         <br/>
         <br/>
@@ -46,11 +46,13 @@
     <script src="app/Directives/ValidationDirective.js"></script>
     <script src="app/Login/loginDirective.js"></script>
     <script src="app/Login/loginController.js"></script>
+    <script src="app/indexController.js"></script>
 
     <!-- Services Scripts -->
     <script src="common/common.services.js"></script>
     <script src="common/employeeResource.js"></script>
     <script src="app/DataService.js"></script>
     <script src="common/userAccount.js"></script>
+    <script src="common/currentUser.js"></script>
 </body>
 </html>
