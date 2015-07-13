@@ -19,9 +19,14 @@
             return profile;
         };
 
+        var isLoggedIn = function () {
+            return profile.isLoggedIn;
+        };
+
         return {
             setProfile: setProfile,
-            getProfile: getProfile
+            getProfile: getProfile,
+            isLoggedIn: isLoggedIn
         };
     };
 })();

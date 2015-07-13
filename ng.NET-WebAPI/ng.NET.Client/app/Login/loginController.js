@@ -5,7 +5,7 @@
 
     function loginController($scope, userAccount, currentUser) {
         $scope.isLoggedIn = function () {
-            return currentUser.getProfile().isLoggedIn;
+            return currentUser.isLoggedIn();
         };
         $scope.message = '';
         $scope.userData = {

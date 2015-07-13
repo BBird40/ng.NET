@@ -2,12 +2,11 @@
     "use strict";
     angular.module("templateApp").controller("indexController", indexController);
 
-    indexController.$inject = ["currentUser"];
+    indexController.$inject = ["$scope", "currentUser"];
 
-    function indexController(currentUser) {
-        var vm = this;
-        vm.isLoggedIn = function () {
-            return currentUser.getProfile().isLoggedIn;
+    function indexController($scope, currentUser) {
+        $scope.isLoggedIn = function () {
+            return currentUser.isLoggedIn();
         };
     }
 })();
