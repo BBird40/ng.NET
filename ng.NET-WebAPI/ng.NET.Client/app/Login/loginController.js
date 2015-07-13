@@ -1,10 +1,12 @@
 ﻿(function () {
     "use strict";
     angular.module("templateApp").controller("loginController", loginController);
-    loginController.$inject = ['$scope', 'userAccount'];
+    loginController.$inject = ['$scope', 'userAccount', 'currentUser'];
 
-    function loginController($scope, userAccount) {
-        $scope.isLoggedIn = false;
+    function loginController($scope, userAccount, currentUser) {
+        $scope.isLoggedIn = function () {
+            return currentUser.getProfile().isLoggedIn;
+        };
         $scope.message = '';
         $scope.userData = {
             userName: '',
@@ -29,11 +31,10 @@
             $scope.userData.userName = $scope.userData.email;
 
             userAccount.login.loginUser($scope.userData,
-                function (data) {
-                    $scope.isLoggedIn = true;
+                function (data) {                    
                     $scope.message = "";
-                    $scope.password = "";
-                    $scope.token = data.access_token;
+                    $scope.password = "";                    
+                    currentUser.setProfile($scope.userData.userName, data.token);
                 }, errorCallback);
         }
 

@@ -2,9 +2,12 @@
     "use strict";
     angular.module("templateApp").controller("homeController", homeController);
 
-    homeController.$inject = ["$scope", "$location", "DataService"];
+    homeController.$inject = ["$scope", "$location", "DataService", "currentUser"];
 
-    function homeController($scope, $location, DataService) {
+    function homeController($scope, $location, DataService, currentUser) {
+        $scope.isLoggedIn = function () {
+            return currentUser.getProfile().isLoggedIn;
+        };
 
         DataService.getEmployees().then(
             function (results) {
