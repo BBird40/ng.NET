@@ -78,5 +78,5 @@ Links associated with the project associated to solve problems.
 * [Data Access Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658127.aspx)
 * [Enable CORS](https://github.com/bigfont/webapi-cors)
 * [Angular with WebApi](http://www.pluralsight.com/courses/angular-web-api-front-back)
-* [ASP.NET Authentication using EF and Owin](http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/)
+* [ASP.NET Identity to Pre-Existing Project](http://httpjunkie.com/2013/311/adding-mvc-5-identity-to-an-existing-project/)
 * [Token based authentication with ASP.NET Web Api](http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/)
