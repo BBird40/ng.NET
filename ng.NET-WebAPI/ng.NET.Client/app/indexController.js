@@ -5,7 +5,8 @@
     indexController.$inject = ["currentUser"];
 
     function indexController(currentUser) {
-        isLoggedIn = function () {
+        var vm = this;
+        vm.isLoggedIn = function () {
             return currentUser.getProfile().isLoggedIn;
         };
     }

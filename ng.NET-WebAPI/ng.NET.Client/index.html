@@ -21,10 +21,10 @@
     </nav>
     
 
-    <div class="container" ng-controller="indexController" ng-if="isLoggedIn()">
-        <div ng-view></div>
+    <div class="container" ng-hide="isLoggedIn()" ng-controller="indexController as vm">
+        <!--<div ng-view></div>
         <br/>
-        <br/>
+        <br/>-->
         <div ng-include="'app/DemoList/employeeListView.html'"></div>
     </div>    
 
