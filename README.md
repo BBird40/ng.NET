@@ -52,3 +52,4 @@ Links associated with the project associated to solve problems.
 * [ASP.NET Identity to Pre-Existing Project](http://httpjunkie.com/2013/311/adding-mvc-5-identity-to-an-existing-project/)
 * [Token based authentication with ASP.NET Web Api](http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/)
 * [Client Side Architecture Inspiration](https://github.com/codeschool/NoteWrangler)
+* [Angular Architecture and Standards](http://www.johnpapa.net/angular-app-structuring-guidelines/)
