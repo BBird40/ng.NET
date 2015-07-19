@@ -1,6 +1,6 @@
 ﻿
 // Handles data interaction with the server
-templateApp.factory('DataService',
+templateApp.factory('employeeData',
     ["$http",
     function ($http) {
 

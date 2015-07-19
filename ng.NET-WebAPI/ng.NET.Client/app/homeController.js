@@ -2,10 +2,10 @@
     "use strict";
     angular.module("templateApp").controller("homeController", homeController);
 
-    homeController.$inject = ["$scope", "$location", "DataService"];
+    homeController.$inject = ["$scope", "$location", "employeeData"];
 
-    function homeController($scope, $location, DataService) {        
-        DataService.getEmployees().then(
+    function homeController($scope, $location, employeeData) {
+        employeeData.getEmployees().then(
             function (results) {
                 // on success
                 var data = results.data;
