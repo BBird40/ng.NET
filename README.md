@@ -1,6 +1,6 @@
 ng.NET
 =========
-ng.NET is a ASP.NET MVC template project using AngularJS, AngularUI, Bootstrap, Entity Framework, and jQuery. The demo code is inspired by the Mark Zamoyta tutorial on AngularJS Forms using Boostrap and MVC5 and the Deborah Kurata tutorial on Angular Front to Back with Web API.
+ng.NET is a ASP.NET web application template project for both MVC and Web API using AngularJS, AngularUI, Bootstrap, Entity Framework, and jQuery. The demo code is inspired by the Mark Zamoyta tutorial on AngularJS Forms using Boostrap and MVC5 and the Deborah Kurata tutorial on Angular Front to Back with Web API.
 
 The design utilized is the N-Tier Layered Application. The layers consist of a Data Access layer, Business layer, and Service layer. Other projects have been created to decouple other pieces of functionality to promote reuse such as the Database Entities (generated from Entity Framework), Utilities, and the Domain Model (to be used by the view).
 
@@ -19,19 +19,12 @@ Download (Not to be confused with NuGet Packages):
 * .NET Framework 4.5
 * Chutzpah (JavaScript Test Runner for Test Explorer)
 * PhantomJS (Headless Browser for ReSharper JavaScript Unit Testing)
-* Angular-Mocks 1.4.2
+* Angular-Mocks 1.3.15
 * Jasmine Spec Runner
 
 Dependencies
 ----
 Libraries and Frameworks downloaded via NuGet can be seen in each project folder at the packages.config file.
-
-To-do
-------
-A list of todo's for the project
-
-* Bug: When the application is refreshed after routing from client-side throws 404 error.
-* New Feature: Possibly create one last project to represent mapping the domain objects to the database entities and vice versa?
  
 Links
 ----
@@ -51,7 +44,9 @@ Links associated with the project associated to solve problems.
 * [Business Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658103.aspx)
 * [Service Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658090.aspx)
 * [Data Access Layer Guidelines](https://msdn.microsoft.com/en-us/library/ee658127.aspx)
+* [Business Layer Guidelines](https://msdn.microsoft.com/en-us/library/aa581779.aspx)
 * [Enable CORS](https://github.com/bigfont/webapi-cors)
 * [Angular with WebApi](http://www.pluralsight.com/courses/angular-web-api-front-back)
 * [ASP.NET Identity to Pre-Existing Project](http://httpjunkie.com/2013/311/adding-mvc-5-identity-to-an-existing-project/)
 * [Token based authentication with ASP.NET Web Api](http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/)
+* [Client Side Architecture](https://github.com/codeschool/NoteWrangler)
