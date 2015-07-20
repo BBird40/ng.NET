@@ -1,8 +1,8 @@
 ﻿// sets up the $scope variable.
 
 templateApp.controller('dfController',
-    ["$scope", "$window", "$routeParams", "employeeData", 'employeeResource',
-    function dfController($scope, $window, $routeParams, employeeData, employeeResource) {
+    ["$scope", "$window", "$routeParams", "employeeDataService", 'employeeResource',
+    function dfController($scope, $window, $routeParams, employeeDataService, employeeResource) {
 
         function errorCallback(response) {
             $scope.serverSideErrors = response.statusText + "\r\n";
@@ -25,7 +25,7 @@ templateApp.controller('dfController',
             $scope.editableEmployee = angular.copy($scope.employee);
         }, errorCallback);                        
 
-        $scope.hobbies = employeeData.getHobbies;
+        $scope.hobbies = employeeDataService.getHobbies;
 
         // great for dynamically making fields required.
         $scope.shouldShowFullName = function() {
