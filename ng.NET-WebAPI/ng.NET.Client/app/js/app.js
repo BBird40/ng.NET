@@ -11,12 +11,12 @@ templateApp.config(
             controller: "homeController"
         })
         .when("/newForm", {
-            templateUrl: "app/DemoForm/dfTemplate.html",
-            controller: "dfController"
+            templateUrl: "app/views/employee-form.html",
+            controller: "employeeFormController"
         })
         .when("/updateForm/:id", {
-            templateUrl: "app/DemoForm/dfTemplate.html",
-            controller: "dfController"
+            templateUrl: "app/views/employee-form.html",
+            controller: "employeeFormController"
         })
         .otherwise({
            redirectTo: "/home" 

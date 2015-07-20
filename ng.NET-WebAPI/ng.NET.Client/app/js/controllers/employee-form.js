@@ -1,8 +1,8 @@
 ﻿// sets up the $scope variable.
 
-templateApp.controller('dfController',
+templateApp.controller('employeeFormController',
     ["$scope", "$window", "$routeParams", "employeeDataService", 'employeeResource',
-    function dfController($scope, $window, $routeParams, employeeDataService, employeeResource) {
+    function employeeFormController($scope, $window, $routeParams, employeeDataService, employeeResource) {
 
         function errorCallback(response) {
             $scope.serverSideErrors = response.statusText + "\r\n";
