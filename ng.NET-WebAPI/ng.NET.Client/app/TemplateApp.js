@@ -7,7 +7,7 @@ templateApp.config(
     function ($routeProvider, $locationProvider) {
     $routeProvider
         .when("/home", {
-            templateUrl: "app/Home.html",
+            templateUrl: "app/views/home.html",
             controller: "homeController"
         })
         .when("/newForm", {
