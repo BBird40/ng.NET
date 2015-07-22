@@ -368,13 +368,13 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{6093c36f-eb6b-470a-a05b-a7d4b00ec116}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{20783BDC-0D37-46D0-87B5-22F096E655C6}</Project>
       <Name>DataAccessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
-      <Project>{595000E2-EE95-48CD-8BFE-8F376E17F71E}</Project>
-      <Name>DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

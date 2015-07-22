@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using DomainModel;
+using BusinessLayer;
 using Newtonsoft.Json;
 
 namespace DataAccessLayer

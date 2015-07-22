@@ -5,7 +5,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using System.Web.OData;
 using DataAccessLayer;
-using DomainModel;
+using BusinessLayer;
 
 namespace ng.NET.WebAPI.Controllers
 {    
