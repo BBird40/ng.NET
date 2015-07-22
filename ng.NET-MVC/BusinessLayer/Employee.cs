@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
 
-namespace ng.NET.Models
+namespace BusinessLayer
 {
     public class Employee
     {
