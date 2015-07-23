@@ -5,6 +5,7 @@ using System.Net;
 using System.Web.Http;
 using System.Web.Mvc;
 using BusinessLayer;
+using DataAccessLayer;
 
 namespace ng.NET.Controllers
 {
@@ -12,11 +13,12 @@ namespace ng.NET.Controllers
     {
         public IEnumerable<Employee> Get()
         {
-            return new List<Employee>()
-            {
-                new Employee { FullName = "Alexandra Byrd" },
-                new Employee { FullName = "Bryan Cox" }
-            };
+            return new EmployeeRepository().Retrieve().AsQueryable();
+        }
+
+        public IEnumerable<Employee> Get(string search)
+        {
+            return new EmployeeRepository().Retrieve().Where(x => x.Department.Contains(search));
         }
 
         public ActionResult Create(Employee employee)
