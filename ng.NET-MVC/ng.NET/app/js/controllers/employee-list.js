@@ -8,6 +8,8 @@
         var vm = this;
         vm.searchCriteria = "WebDev";
 
-        vm.employees = employeeResource.query();
+        employeeResource.query(function(data) {
+            vm.employees = data;
+        });
     }
 }());

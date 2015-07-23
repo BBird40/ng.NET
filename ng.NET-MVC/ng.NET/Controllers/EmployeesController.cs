@@ -9,7 +9,7 @@ using DataAccessLayer;
 
 namespace ng.NET.Controllers
 {
-    public class EmployeeController : ApiController
+    public class EmployeesController : ApiController
     {
         public IEnumerable<Employee> Get()
         {
