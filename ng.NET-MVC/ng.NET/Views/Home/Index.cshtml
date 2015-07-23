@@ -12,9 +12,21 @@
     @Scripts.Render("~/bundles/spa/scripts")
     @Scripts.Render("~/bundles/bootstrap")
 </head>
-    <body class="container"> 
-        <br />       
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">ng.NET Web API</div>
+                <login />
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container" ng-show="isLoggedIn()" ng-controller="indexController">
         <div ng-view></div>
-    </body>
+        <br/>
+        <br/>
+        <div ng-include="'app/views/employee-list.html'"></div>
+    </div>
 </html>
 
