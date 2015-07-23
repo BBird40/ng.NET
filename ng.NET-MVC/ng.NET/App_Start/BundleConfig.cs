@@ -58,11 +58,20 @@ namespace ng.NET
                 "~/Scripts/angular.js",
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
-                "~/app/TemplateApp.js",
-                "~/app/DataService.js",
-                "~/app/Directives/ValidationDirective.js",
-                "~/app/DemoForm/dfController.js",
-                "~/app/DemoForm/dfDirective.js"));
+                "~/app/js/app.js",                                
+                "~/app/js/controllers/employee-form.js",
+                "~/app/js/controllers/employee-list.js",
+                "~/app/js/controllers/home.js",
+                "~/app/js/controllers/index.js",
+                "~/app/js/controllers/login.js",
+                "~/app/js/directives/employee-form.js",
+                "~/app/js/directives/login.js",
+                "~/app/js/directives/validation.js",
+                "~/app/js/services/employee-data.js",
+                "~/common/common.services.js",
+                "~/common/current-user.js",
+                "~/common/employee-resource.js",
+                "~/common/user-account.js"));
 
             #endregion
 

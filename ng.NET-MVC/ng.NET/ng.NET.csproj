@@ -137,13 +137,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\TemplateApp.js" />
-    <Content Include="app\DemoForm\dfController.js" />
-    <Content Include="app\DemoForm\dfDirective.js" />
-    <Content Include="app\DemoForm\dfTemplate.html" />
-    <Content Include="app\DataService.js" />
-    <Content Include="app\Directives\ValidationDirective.js" />
-    <Content Include="app\Home.html" />
+    <Content Include="app\js\app.js" />
+    <Content Include="app\js\controllers\employee-form.js" />
+    <Content Include="app\js\controllers\employee-list.js" />
+    <Content Include="app\js\controllers\home.js" />
+    <Content Include="app\js\controllers\index.js" />
+    <Content Include="app\js\controllers\login.js" />
+    <Content Include="app\js\directives\employee-form.js" />
+    <Content Include="app\js\directives\login.js" />
+    <Content Include="app\js\directives\validation.js" />
+    <Content Include="app\js\services\employee-data.js" />
+    <Content Include="app\views\employee-form.html" />
+    <Content Include="app\views\employee-list.html" />
+    <Content Include="app\views\home.html" />
+    <Content Include="app\views\login.html" />
+    <Content Include="common\common.services.js" />
+    <Content Include="common\current-user.js" />
+    <Content Include="common\employee-resource.js" />
+    <Content Include="common\user-account.js" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -1027,7 +1038,13 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="app\css\" />
+    <Folder Include="app\fonts\" />
+    <Folder Include="app\images\" />
+    <Folder Include="app\js\filters\" />
+    <Folder Include="app\js\resources\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
