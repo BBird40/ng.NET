@@ -13,7 +13,7 @@ namespace ng.NET.Controllers
     {
         public IEnumerable<Employee> Get()
         {
-            return new EmployeeRepository().Retrieve().AsQueryable();
+            return new EmployeeRepository().Retrieve();
         }
 
         public IEnumerable<Employee> Get(string search)

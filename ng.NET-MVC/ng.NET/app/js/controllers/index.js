@@ -6,7 +6,8 @@
 
     function indexController($scope, currentUser) {
         $scope.isLoggedIn = function () {
-            return currentUser.isLoggedIn();
+            return true;
+            // return currentUser.isLoggedIn();
         };
     }
 })();

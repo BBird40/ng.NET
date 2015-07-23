@@ -56,6 +56,7 @@ namespace ng.NET
 
             bundles.Add(new ScriptBundle("~/bundles/spa/scripts").Include(
                 "~/Scripts/angular.js",
+                "~/Scripts/angular-resource.js",
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
                 "~/app/js/app.js",                                
