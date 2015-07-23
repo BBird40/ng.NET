@@ -98,13 +98,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\js\controllers\index-test.js" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="tests.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
     <Content Include="css\jasmine.css" />
     <Content Include="Scripts\jasmine-html.js" />
     <Content Include="Scripts\jasmine.js" />
+    <Content Include="Scripts\sinon-1.9.1.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -117,6 +121,7 @@
       <Name>ng.NET</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
