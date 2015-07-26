@@ -1,6 +1,6 @@
 ﻿(function () {
     "use strict";
-    angular.module("common.services").factory("currentUser", currentUser);
+    angular.module("templateApp").factory("currentUser", currentUser);
 
     function currentUser() {
         var profile = {

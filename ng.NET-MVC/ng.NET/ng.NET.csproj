@@ -152,10 +152,9 @@
     <Content Include="app\views\employee-list.html" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\login.html" />
-    <Content Include="common\common.services.js" />
-    <Content Include="common\current-user.js" />
-    <Content Include="common\employee-resource.js" />
-    <Content Include="common\user-account.js" />
+    <Content Include="app\js\services\current-user.js" />
+    <Content Include="app\js\resources\employee-resource.js" />
+    <Content Include="app\js\resources\user-account.js" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -1044,7 +1043,6 @@
     <Folder Include="app\fonts\" />
     <Folder Include="app\images\" />
     <Folder Include="app\js\filters\" />
-    <Folder Include="app\js\resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -68,11 +68,10 @@ namespace ng.NET
                 "~/app/js/directives/employee-form.js",
                 "~/app/js/directives/login.js",
                 "~/app/js/directives/validation.js",
-                "~/app/js/services/employee-data.js",
-                "~/common/common.services.js",
-                "~/common/current-user.js",
-                "~/common/employee-resource.js",
-                "~/common/user-account.js"));
+                "~/app/js/resources/employee-resource.js",
+                "~/app/js/resources/user-account.js",
+                "~/app/js/services/current-user.js",
+                "~/app/js/services/employee-data.js"));
 
             #endregion
 

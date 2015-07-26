@@ -1,8 +1,6 @@
 ﻿(function () {
     'use strict';
-
     angular.module('templateApp').factory('employeeResource', employeeResource);
-
     employeeResource.$inject = ['$resource'];
 
     /*
