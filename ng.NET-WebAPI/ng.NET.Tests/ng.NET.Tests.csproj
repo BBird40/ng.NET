@@ -102,8 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
-    <Content Include="app\dfControllerTest.js" />
-    <Content Include="app\indexControllerTest.js" />
+    <Content Include="app\js\controllers\index-test.js" />
     <Content Include="css\jasmine.css" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\jasmine-html.js" />

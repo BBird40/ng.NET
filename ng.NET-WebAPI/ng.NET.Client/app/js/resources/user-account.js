@@ -1,6 +1,6 @@
 ﻿(function () {
     "use strict";
-    angular.module("common.services").factory("userAccount", userAccount);
+    angular.module("templateApp").factory("userAccount", userAccount);
     userAccount.$inject = ['$resource', 'appSettings'];
 
     function userAccount($resource, appSettings) {

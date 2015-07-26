@@ -1,4 +1,9 @@
-﻿var templateApp = angular.module("templateApp", ["ngRoute", "ui.bootstrap", "common.services"]);
+﻿var templateApp = angular.module("templateApp", ["ngRoute", "ui.bootstrap", "ngResource"]);
+
+templateApp.constant("appSettings",
+    {
+        serverPath: "http://localhost:6147/"
+    });
 
 templateApp.config(
     // this allows the parameters to be minified but 
