@@ -155,7 +155,7 @@
     <Content Include="app\js\services\current-user.js" />
     <Content Include="app\js\resources\employee-resource.js" />
     <Content Include="app\js\resources\user-account.js" />
-    <Content Include="Content\app.css" />
+    <Content Include="app\css\app.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1039,7 +1039,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\css\" />
     <Folder Include="app\fonts\" />
     <Folder Include="app\images\" />
     <Folder Include="app\js\filters\" />

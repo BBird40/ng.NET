@@ -52,7 +52,7 @@ namespace ng.NET
 
             bundles.Add(new StyleBundle("~/bundles/spa/styles").Include(
                 "~/Content/bootstrap.css",
-                "~/Content/app.css"));
+                "~/app/css/app.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/spa/scripts").Include(
                 "~/Scripts/angular.js",
