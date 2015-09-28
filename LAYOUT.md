@@ -4,13 +4,13 @@ This document lays out the application's architecture. It will outline where thi
 
 Solution Layout
 -----------------------
-The application's architecture starts at the project's root directory. The root directory starts at ng.NET with a solution for both Web API and MVC. Each project has their own purpose and resonsibility. 
+The application's architecture starts at the project's root directory. The root directory starts at ng.NET with a solution for both Web API and MVC. Each project has their own purpose and responsibility. 
 
 * /BusinessLayer - Acronymed as the BL or BLL (Business Logic Layer), this project handles all business rules, workflows, and components. The business layer serves as a intermediary for data exchange between the View and the data access layer. Moreover, this project represents the subject matter of the application in terms of objects.
 * /DataAccessLayer - Acronymed as the DAL, this project handles all communication to backend data. That data can be held in a database, in a file, or obtained from a service.
 * /ServiceLayer - This project works closely with the controller. This layer communicates primarily with web services, the data access layer, and business layer.
 * /Utilities - This project is strictly to house commonly used utitilies. These utilities could be Extensions, Serializers, Parsers, Loggers, etc.
-* /packages - This directory represents all the dependencies/references beusing by the application via NuGet.
+* /packages - This directory represents all the dependencies/references being used by the application via NuGet.
 
 Front End Layout
 ---------------------
